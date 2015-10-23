@@ -10,6 +10,6 @@ tw = net.Twitter('twitter_app1')
 time_ntp = net.get_time_ntp()
 hostname = socket.gethostname()
 
-msg = "[%s] %s: active at %s" % (time_ntp, hostname, net.get_ip_address())
+msg = "[%s] %s: active at %s" % (time_ntp, hostname, net.get_ip_address('wlan0'))
 
 tw.update_status(msg)
