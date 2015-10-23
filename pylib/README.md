@@ -19,8 +19,6 @@ OAUTH_TOKEN_SECRET = xxx
 
 ```Python
 import sys
-sys.path.append("/home/pi/app/llpi_pylib")
-
 import socket
 import llnet as net
 

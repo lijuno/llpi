@@ -1,4 +1,4 @@
 README
 ======
 
-Some useful libraries and scripts used in my Raspberry Pi servers. 
+Some useful random libraries and scripts used in my Raspberry Pi servers. 

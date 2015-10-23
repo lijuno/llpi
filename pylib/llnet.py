@@ -3,11 +3,13 @@ from twython import Twython, TwythonError
 import netifaces
 import ConfigParser
 import ntplib
+import getpass
 
 
 # Global config file object for all llpi_pylib stuff
+username_os = getpass.getuser()
 config = ConfigParser.ConfigParser()
-config.read('/home/pi/.llpi_pylib.cfg')
+config.read('/home/%s/.llpi_pylib.cfg' % username_os)
 
 
 def get_ip_address(interface='wlan0'):
