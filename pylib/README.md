@@ -3,6 +3,12 @@ README
 
 Some random Python stuff for my Raspberry Pis. 
 
+To install dependencies: 
+
+```
+pip install twython netifaces ntplib requests[security]
+```
+
 The configuration file for this library is stored somewhere else. An example of such a configuration file will be
 
 
