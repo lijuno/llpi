@@ -3,6 +3,8 @@ Push basic system info (hostname, IP address, etc.) to Twitter
 """
 
 import sys
+sys.path.append('/home/pi/llpi/pylib')
+
 import socket 
 import llnet as net
  

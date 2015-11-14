@@ -9,7 +9,11 @@ import getpass
 # Global config file object for all llpi_pylib stuff
 username_os = getpass.getuser()
 config = ConfigParser.ConfigParser()
-config.read('/home/%s/.llpi_pylib.cfg' % username_os)
+#config.read('/home/%s/.llpi_pylib.cfg' % username_os)
+
+# username_os is dependent on the environment, which may not be interpretted correctly in cron job
+# Use absolute path to avoid such a conflict
+config.read('/home/pi/.llpi_pylib.cfg')  
 
 
 def get_ip_address(interface='wlan0'):
