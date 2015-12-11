@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script taken from http://blog.samat.org/2015/02/05/slimming-an-existing-raspbian-install/
+# Script based on http://blog.samat.org/2015/02/05/slimming-an-existing-raspbian-install/
 # Run it via sudo slim_pi.sh
 
 # GUI-related packages
@@ -42,6 +42,7 @@ python3-pifacecommon python3-pifacedigitalio python3-pifacedigital-scratch-handl
 oracle-java8-jdk
 minecraft-pi python-minecraftpi
 wolfram-engine
+libreoffice*
 "
 # Because of of https://github.com/RPi-Distro/raspberrypi-ui-mods/issues/2 (thanks @robertely)
 apt-get -y remove raspberrypi-ui-mods
