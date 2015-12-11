@@ -42,7 +42,7 @@ python3-pifacecommon python3-pifacedigitalio python3-pifacedigital-scratch-handl
 oracle-java8-jdk
 minecraft-pi python-minecraftpi
 wolfram-engine
-libreoffice*
+libreoffice
 "
 # Because of of https://github.com/RPi-Distro/raspberrypi-ui-mods/issues/2 (thanks @robertely)
 apt-get -y remove raspberrypi-ui-mods
