@@ -20,6 +20,8 @@ OAUTH_TOKEN = xxx
 OAUTH_TOKEN_SECRET = xxx
 ```
 
+_Update Mar 2016_: Note that if the user name is not "pi" and you want to use this library in cronjobs, you may need to change the hard-coded config file path in llnet.py. 
+
 
 * Case 1: push IP address to Twitter
 
