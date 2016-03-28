@@ -9,15 +9,17 @@ import getpass
 # Global config file object for all llpi_pylib stuff
 username_os = getpass.getuser()
 config = ConfigParser.ConfigParser()
-#config.read('/home/%s/.llpi_pylib.cfg' % username_os)
 
-# username_os is dependent on the environment, which may not be interpretted correctly in cron job
-# Use absolute path to avoid such a conflict
-config.read('/home/pi/.llpi_pylib.cfg')  
-
+# Read configparser file now.
+# Crontab will not assume anything about environmental variables, and username_os will not work as expected
+# Solution 1: use absolute path below at the cost of portability
+# config.read('/home/pi/.llpi.cfg')  
+# Solution 2: source the BASH profile in the cronjob, and use username_os below. Good portability. 
+# --> See http://unix.stackexchange.com/a/27291 for details
+config.read('/home/%s/.llpi.cfg' % username_os)
 
 def get_ip_address(interface='wlan0'):
-    # Return a string which may be masked 
+    # Return an IP string which may be masked depending on its type 
     ip_str = netifaces.ifaddresses(interface)[netifaces.AF_INET][0]['addr']
     ip_digits = ip_str.split('.')
     ip_digits = [int(i) for i in ip_digits]  # convert to four 8-bit int
